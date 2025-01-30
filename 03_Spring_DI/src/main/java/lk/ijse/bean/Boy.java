@@ -16,7 +16,6 @@ public class Boy{
 
     //tight coupling
     public void chatWithGirl(){
-
         girl.chat();
     }
 
