@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="07_Spring_Environment" />
+        <module name="08_Spring_Web_MVC" />
+        <module name="09_Spring_Web_MVC" />
         <module name="04_FullModeVsLightMode" />
+        <module name="11_BackEnd" />
+        <module name="RestController" />
         <module name="05_Configuration" />
         <module name="01_Spring_Core" />
         <module name="02_Spring_Bean_LifeCycle" />

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SpringBeanOne {
-    @Bean
+   /* @Bean
     public SpringBeanTwo getSpringBeanTwo () {
         SpringBeanThree springBeanThree1 = getSpringBeanThree();
         SpringBeanThree springBeanThree2 = getSpringBeanThree();
@@ -18,5 +18,5 @@ public class SpringBeanOne {
     @Bean
     public SpringBeanThree getSpringBeanThree(){
         return new SpringBeanThree();
-    }
+    }*/
 }

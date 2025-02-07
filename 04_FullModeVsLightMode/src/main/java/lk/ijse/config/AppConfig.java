@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "lk.ijse.bean")
 public class AppConfig {
 
-        /*@Bean
+        @Bean
         public SpringBeanTwo getSpringBeanTwo () {
             SpringBeanThree springBeanThree1 = getSpringBeanThree();
             SpringBeanThree springBeanThree2 = getSpringBeanThree();
@@ -25,7 +25,6 @@ public class AppConfig {
         public SpringBeanThree getSpringBeanThree(){
             return new SpringBeanThree();
         }
-*/
 
 }
 

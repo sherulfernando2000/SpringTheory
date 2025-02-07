@@ -12,18 +12,18 @@ public class AppInitializer {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(AppConfig.class);
 
-        /*Map<String, String> getenv = System.getenv();
+        Map<String, String> getenv = System.getenv();
         for (String key : getenv.keySet()) {
             System.out.println(key + "=" + getenv.get(key) );
         }
-        System.out.println("PROCESSOR_LEVEL");*/
+        System.out.println("PROCESSOR_LEVEL");
 
         //Access predefined properties from java
-       // Properties properties = System.getProperties();
+        Properties properties = System.getProperties();
 
-      /*  for (String key : properties.stringPropertyNames()) {
+        for (String key : properties.stringPropertyNames()) {
             System.out.println(key + "=" + properties.getProperty(key));
-        }*/
+        }
 
        // System.out.println(System.getProperty("os.name"));
 

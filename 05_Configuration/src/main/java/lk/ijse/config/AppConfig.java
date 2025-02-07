@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-//@ComponentScan(basePackageClasses = SpringBean.class)
+@ComponentScan(basePackageClasses = SpringBean.class)
 @Import(AppConfig1.class)
 public class AppConfig {
     public AppConfig() {
