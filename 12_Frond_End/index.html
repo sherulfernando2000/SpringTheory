@@ -55,8 +55,33 @@
 
 <script>
 
-const getAll
+const getAll = () =>{
+    $.ajax({
+        url: "http://localhost:8080/11_BackEnd_Web_exploded/api/v1/customer/getAll",
+        type:"GET",
+        success:(resp)=>{
+            console.log("Hi")
+            let tableBody = $("#user_table_body");
+            const customers = resp
+            tableBody.empty();
+            customers.map((customer, number) =>{
+                let data = `<tr>
+                                <td>${customer.id}</td>
+                                <td>${customer.name}</td>
+                                <td>${customer.address}</td>
 
+                            </tr>`
+
+                tableBody.append(data);
+            })
+         },
+        error:(err) =>{
+            console.log(err)
+        }
+    });
+}
+
+getAll();
 
 $("#btn_save_customer").click((e) =>{
     console.log("save clicked")
