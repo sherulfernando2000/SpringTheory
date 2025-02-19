@@ -5,7 +5,7 @@
       <element id="javaee-facet-resources" facet="RestController/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="RestController" />
+          <element id="module-output" name="10_RestController" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: io.micrometer:micrometer-commons:1.14.3" />

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("variable")
 public class PathVariableController {
+    //http://localhost:8080/1_Rest_Controllers_Web_exploded/path/1
     @GetMapping(path = "{id}")
     public String test1(@PathVariable("id") String id){
         return id;

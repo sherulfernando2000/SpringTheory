@@ -16,6 +16,8 @@
         <option value="$PROJECT_DIR$/09_Spring_Web_MVC/pom.xml" />
         <option value="$PROJECT_DIR$/RestController/pom.xml" />
         <option value="$PROJECT_DIR$/11_BackEnd/pom.xml" />
+        <option value="$PROJECT_DIR$/13_Spring_Data_JPA/pom.xml" />
+        <option value="$PROJECT_DIR$/N14_Spring_Boot/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
