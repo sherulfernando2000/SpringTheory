@@ -2,6 +2,9 @@ package lk.ijse.n14_spring_boot.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 
@@ -11,6 +14,9 @@ public class Item {
     private String Description;
     private double price;
     private int quantity;
+
+    @OneToMany(mappedBy = "item")
+    private List<OrderDetails> orderDetails;
 
     public Item() {
 

@@ -5,7 +5,9 @@ import lk.ijse.n14_spring_boot.dto.CustomerDTO;
 import lk.ijse.n14_spring_boot.dto.ItemDTO;
 import lk.ijse.n14_spring_boot.entity.Customer;
 import lk.ijse.n14_spring_boot.service.CustomerServiceImpl;
+import lk.ijse.n14_spring_boot.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -21,31 +23,30 @@ public class CustomerController {
 
     @GetMapping("get")
     public List<CustomerDTO> getCustomer(){
-        List<CustomerDTO> customerDTOS = new ArrayList<>();
-        List<Customer> customers = customerService.getAll();
-        for(Customer customer : customers){
-            CustomerDTO customerDTO = new CustomerDTO(customer.getId(), customer.getName(), customer.getAddress());
-            customerDTOS.add(customerDTO);
-        }
-
-        return customerDTOS ;
+        return customerService.getAll() ;
     }
 
 
     @PostMapping("save")
-    public boolean saveCustomer(@RequestBody CustomerDTO customerDTO){
-        boolean isSaved = customerService.addCustomer(customerDTO);
-        return isSaved;
+    public ResponseUtil saveCustomer(@RequestBody CustomerDTO customerDTO){
+            customerService.addCustomer(customerDTO);
+            return new ResponseUtil(201,"Customer saved.",null);
+
+
     }
 
+
+
+
     @PutMapping("update")
-    public boolean updateCustomer(@RequestBody  CustomerDTO customerDTO){
-        boolean isUpdate = customerService.updateCustomer(customerDTO);
-        return isUpdate;
+    public ResponseUtil updateCustomer(@RequestBody  CustomerDTO customerDTO){
+         customerService.updateCustomer(customerDTO);
+        return new ResponseUtil(201,"Customer saved.",null);
     }
     @DeleteMapping(path = "delete/{id}")
-    public boolean deleteCustomer(@PathVariable Integer id) {
-        return customerService.deleteCustomer(id);
+    public ResponseUtil deleteCustomer(@PathVariable Integer id) {
+        customerService.deleteCustomer(id);
+        return new ResponseUtil(201,"Customer saved.",null);
     }
 
 

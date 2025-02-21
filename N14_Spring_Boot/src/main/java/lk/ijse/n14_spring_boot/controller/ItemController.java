@@ -2,8 +2,8 @@ package lk.ijse.n14_spring_boot.controller;
 
 
 import lk.ijse.n14_spring_boot.dto.ItemDTO;
-import lk.ijse.n14_spring_boot.entity.Item;
 import lk.ijse.n14_spring_boot.service.ItemService;
+import lk.ijse.n14_spring_boot.service.ItemServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

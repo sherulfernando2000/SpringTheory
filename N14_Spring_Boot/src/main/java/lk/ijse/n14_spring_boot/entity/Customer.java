@@ -13,8 +13,8 @@ public class Customer {
     private String name;
     private String address;
 
-    /*@OneToMany
-    private List<Order> orders;*/
+    @OneToMany(mappedBy = "customer")
+    private List<Orders> orders;
 
     public Customer(int id, String name, String address) {
         this.id = id;
