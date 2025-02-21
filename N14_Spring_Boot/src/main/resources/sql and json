@@ -1,0 +1,22 @@
+{
+  "orderDTO": {
+    "id":106,
+    "date": "2025-02-19",
+    "total": 1500.00,
+    "customerId": 1
+  },
+  "orderDetailsDTO": [
+    {
+      "id": 4,
+      "quantity": 2,
+      "i_id": 1,
+      "o_id": 106
+    },
+     {
+      "id": 4,
+      "quantity": 2,
+      "i_id": 2,
+      "o_id": 106
+    }
+  ]
+}
