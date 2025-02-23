@@ -76,10 +76,12 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     @Override
     @Transactional
     public void placeOrder(PlaceOrderDTO placeOrderDTO) {
-
+        System.out.println("orderDTO:"+placeOrderDTO.getOrderDTO().getId()+""+placeOrderDTO.getOrderDTO().getTotal());
+        System.out.println("orderDetailsDTO:"+placeOrderDTO.getOrderDetailsDTO().get(0).getId());
         try{
             OrderDTO orderDTO = placeOrderDTO.getOrderDTO();
             Orders ordersO = modelMapper.map(orderDTO, Orders.class);
+            ordersO.setId(0);
             Orders savedOrder = orderRepo.save(ordersO);
 
             List<OrderDetailsDTO> orderDetailsDTOs = placeOrderDTO.getOrderDetailsDTO();
@@ -107,7 +109,6 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
 
     }
-
 
 
 
