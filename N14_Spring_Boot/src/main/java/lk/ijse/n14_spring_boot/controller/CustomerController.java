@@ -8,6 +8,7 @@ import lk.ijse.n14_spring_boot.service.CustomerServiceImpl;
 import lk.ijse.n14_spring_boot.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class CustomerController {
 
 
     @PostMapping("save")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseUtil saveCustomer(@RequestBody CustomerDTO customerDTO){
             customerService.addCustomer(customerDTO);
             return new ResponseUtil(201,"Customer saved.",null);
@@ -39,11 +41,13 @@ public class CustomerController {
 
 
     @PutMapping("update")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseUtil updateCustomer(@RequestBody  CustomerDTO customerDTO){
          customerService.updateCustomer(customerDTO);
         return new ResponseUtil(201,"Customer saved.",null);
     }
     @DeleteMapping(path = "delete/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseUtil deleteCustomer(@PathVariable Integer id) {
         customerService.deleteCustomer(id);
         return new ResponseUtil(201,"Customer saved.",null);
